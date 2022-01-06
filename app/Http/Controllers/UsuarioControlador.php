@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Log;
 
 class UsuarioControlador extends Controller
 {
@@ -12,6 +13,7 @@ class UsuarioControlador extends Controller
 
     public function index()
     {
+        Log::debug([UsuarioControlador::class,'index']);
         return '<h3>Lista de usuarios</h3>'.
             '<ul>' .
                 '<li>João</li>' .

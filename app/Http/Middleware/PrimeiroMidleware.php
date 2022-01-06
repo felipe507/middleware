@@ -16,7 +16,9 @@ class PrimeiroMidleware
      */
     public function handle(Request $request, Closure $next)
     {
-        Log::debug('Middleware: Executando o primeiro middleware');
-        return $next($request);
+        Log::debug('Middleware: Executando o primeiro middleware Antes');
+        $response = $next($request);
+        Log::debug('Middleware: Executando o primeiro middleware Depois');
+        return $response;
     }
 }
