@@ -21,3 +21,6 @@ use App\Http\Middleware\PrimeiroMidleware;
 
 Route::get('/usuarios', [UsuarioControlador::class,'index'])->middleware('primeiro', 'segundo');
 
+Route::get('/terceira', function () {
+    return '<h3>Terceira Middleware</h3>';
+})->middleware('terceiro:joao');
