@@ -23,4 +23,4 @@ Route::get('/usuarios', [UsuarioControlador::class,'index'])->middleware('primei
 
 Route::get('/terceira', function () {
     return '<h3>Terceira Middleware</h3>';
-})->middleware('terceiro:joao');
+})->middleware('terceiro:joao,65');

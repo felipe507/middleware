@@ -14,9 +14,9 @@ class TerceiroMiddleware
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next, $nome)
+    public function handle(Request $request, Closure $next, $nome, $idade)
     {
-    Log::debug("Passou pelo terceiro middleware [nome = $nome]");
+    Log::debug("Passou pelo terceiro middleware [nome = $nome, idade = $idade]");
         return $next($request);
     }
 }
